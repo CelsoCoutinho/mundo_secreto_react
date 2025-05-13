@@ -16,7 +16,7 @@ const stages = [
 ];
 
 // quantidade de tentativas
-const guessesQty = 11
+const guessesQty = 10
 function App() {
 
   const [gameStage, setGameStage] = useState(stages[0].name);
