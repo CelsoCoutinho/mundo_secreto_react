@@ -7,7 +7,7 @@
 }
 
 .tip span {
-    color: aqua;
+    color: red;
     font-size: 20px;
 }
 
@@ -54,18 +54,18 @@
     border: 2px solid aquamarine;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
 
     .App {
         margin: 30% auto;
     }
 
     .wordContainer {
+        display: flex;
+        justify-content: center;
         margin: 1.5em;
         padding: 0.5em;
-        border: 5px solid aqua;
         border-radius: 15px;
-        display: flex;
     }
 
     .letter, .blankSquare {

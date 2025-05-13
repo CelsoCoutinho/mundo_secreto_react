@@ -15,13 +15,12 @@ const Game = ({
     const [letter, setLetter] = useState("");
     const letterInputRef = useRef(null)
 
-const handleSubmit = (e) => {
-  e.preventDefault();
-  verifyLetter(letter);
-  setLetter("");
-  letterInputRef.current.focus();
-}
-
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        verifyLetter(letter);
+        setLetter("");
+        letterInputRef.current.focus();
+    }
 
     return (
         <div className="game">
@@ -29,7 +28,10 @@ const handleSubmit = (e) => {
                 <span>pontuação: {score}</span>
             </p>
             <h1>Advinhe a palavra:</h1>
-            <h3 className="tip">Dica sobre a palavra: <span>{pickedCategory}</span></h3>
+            <h3 className="tip">
+                Dica sobre a palavra:
+                <span> {pickedCategory}</span>
+            </h3>
             <p>Você ainda tem {guesses} tentativas.</p>
             <div className="wordContainer">
                 {letters.map((letter, i) => (
@@ -51,6 +53,7 @@ const handleSubmit = (e) => {
                         onChange={(e) => setLetter(e.target.value)}
                         value={letter}
                         ref={letterInputRef}
+                        autoComplete='off'
                     />
                     <button>Jogar!</button>
                 </form>
